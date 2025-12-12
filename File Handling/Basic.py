@@ -50,9 +50,10 @@
 #     print(file.read()) # Starts reading from the Position set for Cursor
 #
 
-import os
-print(os.getcwd())
-print(os.getpid())
-print(os.path.exists("Demo.txt")) # Can be used to check weather the file exists or not
-# os.remove("Demo.txt") # can be used to remove or delete the file
-os.rename("Demo.txt", "Printing.txt") # can be used to rename the file
+# about 'os' Function
+# import os
+# print(os.getcwd())
+# print(os.getpid())
+# print(os.path.exists("Demo.txt")) # Can be used to check weather the file exists or not
+# # os.remove("Demo.txt") # can be used to remove or delete the file
+# os.rename("Demo.txt", "Printing.txt") # can be used to rename the file
