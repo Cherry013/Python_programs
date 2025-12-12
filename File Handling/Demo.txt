@@ -1,0 +1,4 @@
+I am using Python Programming 
+Nothing Just using new line 
+Just using it
+I am appending to the Current txt file
