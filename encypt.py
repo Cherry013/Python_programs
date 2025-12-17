@@ -1,4 +1,6 @@
 alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',]
+alphabet = list(map(chr,range(97,123))) # This can be used
+Capital_alphabet = list(map(chr,range(65,91)))
 
 def encrypt(ori_text,shift):
     cipher_text = ""
