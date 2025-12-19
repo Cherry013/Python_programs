@@ -24,5 +24,14 @@
 # except EOFError:
 #     print("EOFError")
 
-
-StopIteration
+# try:
+#     a = int(input())
+#     if a > 0:
+#         raise ValueError()
+#         print("Hello")
+# except Exception as e:
+#     print(e,e.__class__)
+# else:
+#     print(a)
+# finally:
+#     print("Completed")

@@ -24,8 +24,8 @@ d = f.read()
 print(type(d))
 print(d)
 
-print(f.readline()) # It Reads only one line
-print(f.readlines()) # It reads all lines
+print(f.readline()) # It Reads only one line from where the cursor is
+print(f.readlines()) # It reads all lines from the cursor to the End of the file and returns in a list
 
 
 # append new lines to the existing file
