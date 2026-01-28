@@ -7,7 +7,6 @@ def increment():
     for _ in range(10000000):
         x+=1
 
-
 print(x) # Output: 0
 
 

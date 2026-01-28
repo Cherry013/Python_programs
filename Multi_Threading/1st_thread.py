@@ -66,5 +66,3 @@ for i in range(5):
     t5.start()
     t4.join()
     t5.join()
-
-
