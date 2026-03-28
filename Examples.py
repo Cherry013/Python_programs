@@ -1,14 +1,14 @@
-# import sys
-#
-# import os
-#
-# from functools import reduce
+import sys
+
+import os
+
+from functools import reduce
 
 # Packages and modules
 # 1. Write a Python program that attempts to dynamically import a module at runtime.
 # The program should only import the module if it actually exists;
 # otherwise, it should print "Module does not exist".
-#
+
 # n = input("Enter the module name: ")
 # if n+".py" in os.listdir():
 #     import importlib
@@ -17,7 +17,7 @@
 #     # importlib.reload(n)
 # else:
 #     print("File Not Found")
-#
+# #
 # without and with Error handling
 #
 # try:
@@ -50,7 +50,7 @@
 #     def action(self):
 #         print("Sleeping")
 #
-# # Q2.py outside batch2 pacage
+# # Q2.py outside batch2 package
 # from batch2.C import Dog
 # from batch2.subpack.D import *
 #

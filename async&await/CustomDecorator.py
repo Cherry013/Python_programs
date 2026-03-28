@@ -78,6 +78,49 @@ def add(x,y):
         su += i
     return su
 
-add(10,20)
+# add(10,20)
 # print(time.asctime())
 # print(list(time.asctime().split()))
+
+def dec(fn):
+    @functools.wraps(fn)
+    def indec(*args, **kwargs):
+        print("Just adding 2sec Delay to start the function")
+        time.sleep(2)
+        result = fn(*args,**kwargs)
+        print("Execution Completed")
+        print()
+        return result
+    return indec
+
+@dec
+def add(a,b,c):
+    """ Just adding A DOC"""
+    return a+b+c
+
+# print(add.__doc__)
+# print(add(1,2,3))
+
+
+def tim(delay):
+    def dec(fn):
+        @functools.wraps(fn)
+        def indec(*args, **kwargs):
+            print(f"Just adding {delay}sec Delay to start the function")
+            print(f"Address inside Decorator : {fn}")
+            time.sleep(delay)
+            result = fn(*args,**kwargs)
+            print("Execution Completed")
+            print()
+            return result
+        print(f"Address indec : {indec}")
+        return indec
+    return dec
+
+k = int(input("Enter Delay : "))
+@tim(k)
+def add(a,b,c):
+    """ Just adding A DOC"""
+    return a+b+c
+print(f"Address add : {add}")
+print(add(10,15,25))
