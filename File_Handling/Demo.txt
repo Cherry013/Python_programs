@@ -1,0 +1,7 @@
+Using Low-Level Opening
+Nothing Just using new line 
+Just using it
+I am appending to the Current txt file
+Using Low-Level Opening
+Appending Using Os
+Just Writing the data using Functions
