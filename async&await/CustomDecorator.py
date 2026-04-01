@@ -18,8 +18,8 @@ def Decorator(func):
 def fun(x,y):
     return x+y
 
-# fun(2,3)
-# print(Decorator.__dict__)
+fun(2,3)
+print(Decorator.__dict__)
 
 
 # Looping using decorators
@@ -65,9 +65,10 @@ def timer(func):
         # start = time.asctime()
         start = time.time()
         print("Started: ", start)
-        print(func(*args, **kwargs))
+        print(f"Sum : {func(*args, **kwargs)}")
         # end = time.asctime().split()
         end = time.time()
+        print(f"End : {end}")
         print("Time taken: ",end-start)
     return wrapper
 
@@ -78,7 +79,7 @@ def add(x,y):
         su += i
     return su
 
-# add(10,20)
+add(1000,2000)
 # print(time.asctime())
 # print(list(time.asctime().split()))
 
@@ -117,10 +118,10 @@ def tim(delay):
         return indec
     return dec
 
-k = int(input("Enter Delay : "))
-@tim(k)
-def add(a,b,c):
-    """ Just adding A DOC"""
-    return a+b+c
-print(f"Address add : {add}")
-print(add(10,15,25))
+# k = int(input("Enter Delay : "))
+# @tim(k)
+# def add(a,b,c):
+#     """ Just adding A DOC"""
+#     return a+b+c
+# print(f"Address add : {add}")
+# print(add(10,15,25))

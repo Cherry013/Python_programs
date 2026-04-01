@@ -415,3 +415,65 @@ from functools import reduce
 
 # for i in range(456):
 #     print(f"HexValue({i}): {hex(i)}")
+
+
+# def Ram(address):
+#     print(f"address : {address}")
+#     def Indec(a,b,c):
+#         if isinstance(a,int) and isinstance(b,int) and isinstance(c,int):
+#             st = address(a,b,c)
+#             print(st)
+#         else:
+#             print("Wrong Data type Parameters")
+#     print(f"Indec : {Indec}")
+#     return Indec
+# @Ram
+# def Charan(a,b,c):
+#     return a+b+c
+# print(f"Charan : {Charan}")
+# Charan(2,5,4)
+# print(type(56))
+#
+# def Decorator(func):
+#     def Indec(l):
+#         if len(l)>8:
+#             sp = "!@#$%^&*()_+-="
+#             f = False
+#             for i in sp:
+#                 if i in l:
+#                     f = True
+#             if f:
+#                 k = func(l)
+#                 print(f"Password is Valid : {k}")
+#                 return k
+#             return "Invalid Password with No special Characters"
+#         return "Invalid Password length less than 8"
+#     return Indec
+#
+# @Decorator
+# def Yashwanth(x):
+#     return x+"Chinnu"
+#
+# Yashwanth("asdfgfg@")
+
+
+
+
+
+
+
+#
+# def Dec(a):
+#     def Indec():
+#         print("Welcome")
+#         a()
+#     return Indec
+#
+# @Dec
+# def f():
+#     print("Learning Python")
+#
+# f()
+#
+
+
