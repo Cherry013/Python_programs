@@ -3,8 +3,11 @@
 # Using 'with' it will automatically call '__enter__' to start a process and it calls '__exit__' to End the process at the End of the block.
 # Those two methods contains logic to start and end the process
 
-# with open('Hello.txt','r') as f:
-#     print(f.read())
+with open('Hello.txt','r') as f:
+    print(f.read())
+    print(f.closed)
+
+print(f.closed)
 
 # Custom Context Manager
 # This is custom context manager Instead of open() U created your own way you can write logic on your own inside the '__enter__' and '__exit__' for starting and exiting

@@ -376,24 +376,24 @@ from functools import reduce
 # 6. Create a custom context manager using @contextmanager from the contextlib
 # module that opens a file, yields the file object, and ensures the file is closed
 # even if an exception occurs.
-#
-# from contextlib import contextmanager
-# @contextmanager
-# def opening(FileName, mode="r"):
-#     file = None
-#     try:
-#         file = open(FileName, mode)
-#         yield file
-#     except Exception as e:
-#         print(e)
-#     finally:
-#         if file is not None:
-#             file.close()
-#
-# with opening("Hello.txt") as file:
-#     print(file.read())
-#     print(f"Closed? {file.closed}")
-# print(f"Closed? {file.closed}")
+
+from contextlib import contextmanager
+@contextmanager
+def opening(FileName, mode="r"):
+    file = None
+    try:
+        file = open(FileName, mode)
+        yield file
+    except Exception as e:
+        print(e)
+    finally:
+        if file is not None:
+            file.close()
+
+with opening("Hello.txt") as file:
+    print(file.read())
+    print(f"Closed? {file.closed}")
+print(f"Closed? {file.closed}")
 
 
 # 7. Write a program using a context manager that opens a file in read mode, uses a

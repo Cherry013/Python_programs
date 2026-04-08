@@ -2,8 +2,9 @@
 # To create and Write a sentences in the file or if the file exists it write in it from the start
 f = open("Demo.txt","w")
 f.write("Hello, This is Charan I am writing in a new file")
+print(f.closed)
 f.close()
-
+print(f.closed)
 # Another Ways to write, this way You don't need to close it closes automatically
 with open("Demo.txt","w") as file:
     file.write("I am using Python Programming \nNothing Just using new line \nJust using it")
@@ -44,6 +45,7 @@ with open("demo.txt","wb") as file:
 with open("Demo.txt","r") as file:
     print(file.tell()) # Tells the Cursor position
     print(file.read(50)) # Reads the file upto 25th position
+    print(file.readline())
     print(file.tell()) # Shows 26 because 25 completed reading
     print(file.seek(30)) # Sets the Cursor position
     print(file.tell())  # Shows the position Curser was set
