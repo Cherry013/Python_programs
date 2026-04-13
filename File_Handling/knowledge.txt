@@ -1,0 +1,6 @@
+Python is used in data science
+Pandas is used for data analysis
+PySpark is used for big data processing
+File handling is the base of all data systems
+NumPy is used for numerical computation
+RAG systems retrieve relevant text chunks

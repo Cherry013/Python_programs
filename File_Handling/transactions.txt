@@ -1,0 +1,9 @@
+user_id,amount,category
+U1,100,food
+U2,-50,shopping
+U3,200,travel
+U4,abc,food
+U5,300,shopping
+U6,120,food
+U7,,travel
+U8,450,electronics

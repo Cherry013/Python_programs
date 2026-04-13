@@ -1,0 +1,5 @@
+U1,100.0,food
+U3,200.0,travel
+U5,300.0,shopping
+U6,120.0,food
+U8,450.0,electronics
