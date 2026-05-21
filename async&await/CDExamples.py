@@ -4,15 +4,15 @@ def Dec(func):
         print(a,b,sep="\n")
         func(*a,**b)
         print("Done")
-    # print(f"Inner : {Inner}")
-    # print(f"func : {func}")
+    print(f"Inner : {Inner}")
+    print(f"func : {func}")
     return Inner
 
-# @Dec
-# def greet(s):
-#     print(f"Hello {s}")
-# # print(f"Greet : {greet}")
-# greet("Ravi")
+@Dec
+def greet(s):
+    print(f"Hello {s}")
+print(f"Greet : {greet}")
+greet("Ravi")
 
 def multiplyer(func):
     def Inner(*a,**b):

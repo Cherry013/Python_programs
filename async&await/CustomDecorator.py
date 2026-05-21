@@ -14,9 +14,10 @@ def Decorator(func):
     print("Hello")
     return wrapper
 
-@Decorator
+# @Decorator
 def fun(x,y):
     return x+y
+# fun = Decorator(fun)
 
 # fun(2,3)
 #
