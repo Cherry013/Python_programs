@@ -18,13 +18,13 @@ def Decorator(func):
 def fun(x,y):
     return x+y
 # fun = Decorator(fun)
-
-# fun(2,3)
 #
+# fun(2,3)
+
 # Looping using decorators
 def rep(n):
     def decorator(func):
-        # @functools.wraps(func)
+        @functools.wraps(func)
         def wrapper(*args, **kwargs):
             print(f"Calling {func.__name__}")
             for _ in range(n):
@@ -39,6 +39,10 @@ def Hello(a,b):
 
 # Hello(1,2)
 # print(Hello.__doc__)
+# print(Hello.__name__)
+# print(Hello.__code__)
+# print("Globals:",Hello.__globals__)
+# print(Hello.__dict__)
 
 # Validations using Custom decorators
 def validations(fun):
@@ -52,10 +56,10 @@ def validations(fun):
 @validations
 def distance(x,y):
     return (x**2) + (y**2)
-#
-# print(distance(0    ,2))
+
+# print(distance(0,2))
 # print(distance(1,-2))
-#
+
 
 # Timing decorator
 def timer(func):
@@ -78,17 +82,17 @@ def add(x,y):
     for i in range(1, x + y + 1):
         su += i
     return su
-#
+
 # add(100000,200000)
 # print(add.__doc__)
-# # print(time.asctime())
-# # print(list(time.asctime().split()))
-#
+# print(time.asctime())
+# print(list(time.asctime().split()))
+
 def dec(fn):
     @functools.wraps(fn)
     def indec(*args, **kwargs):
         print("Just adding 2sec Delay to start the function")
-        time.sleep(6)
+        time.sleep(2)
         result = fn(*args,**kwargs)
         print("Execution Completed")
         print()
@@ -100,11 +104,11 @@ def add(a,b,c):
     """ Just adding A DOC"""
     return a+b+c
 
-# # print(add.__doc__)
+# print(add.__doc__)
 # print(add(1,2,3))
-#
-#
-def tim(delay):
+
+
+def tim(delay=3):
     def dec(fn):
         @functools.wraps(fn)
         def indec(*args, **kwargs):
@@ -114,6 +118,7 @@ def tim(delay):
             result = fn(*args,**kwargs)
             print("Execution Completed")
             return result
+        print(f"Address fn: {fn}")
         print(f"Address indec : {indec}")
         return indec
     return dec
