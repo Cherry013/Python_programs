@@ -1,11 +1,11 @@
 class Instagram:
     usernames = {}
-    def __init__(self,name,username,age,gender):
+    def __init__(self,name,username,age,gender,psd):
         self.name = name
         self.username = username
         self.age = age
         self.gender = gender
-        self.password = input("Enter your password: ")
+        self.password = psd
         self.followers = 0
         self.following = 0
         self.friends_list = []
@@ -21,9 +21,10 @@ class Instagram:
                 print("Username already registered try another one")
                 continue
             break
+        psd = input("Enter Your Password: ")
         age = input("Enter your age: ")
         gender = input("Enter your gender(Male/Female): ")
-        return cls(name,username,age,gender)
+        return cls(name,username,age,gender,psd)
 
     def login(self):
         if self.logged:
@@ -85,9 +86,9 @@ class Instagram:
             print("Not logged in")
 
 
-# i1 = Instagram("Cherry","Charan",23,"Male")
+# i1 = Instagram("Cherry","Charan",23,"Male","Hello123")
 i1 = Instagram.signup()
-# i2 = Instagram("MK","Murali",23,"Male")
+# i2 = Instagram("MK","Murali",23,"Male","Hello243")
 i2 = Instagram.signup()
 i3 = Instagram.signup()
 i4 = Instagram.signup()
